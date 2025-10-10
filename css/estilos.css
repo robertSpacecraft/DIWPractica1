@@ -1,8 +1,66 @@
-/*Estilos generales*/
+/*Fuentes*/
+/*Liberation Sans (equiv. Helvetica) Para textos generales*/
+@font-face {
+    font-family: "Liberation Sans";
+    src: url("../fonts/liberation_sans/LiberationSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Liberation Sans";
+    src: url("../fonts/liberation_sans/LiberationSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Liberation Sans";
+    src: url("../fonts/liberation_sans/LiberationSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Liberation Sans";
+    src: url("../fonts/liberation_sans/LiberationSans-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*Libre Baskerville (equiv. Georgia), para citas*/
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Estilos generales*/
 body {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 25);
     line-height: 1.6;
 }
@@ -19,17 +77,24 @@ body {
     margin: 1.5rem 0;
 }
 
-
+blockquote,
+q,
+cite {
+    font-family: "Libre Baskerville", Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
 
 /*Header*/
 header h1 {
     text-align: center;
     font-size: 3rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
     margin: 1rem 0 0.5rem;
 }
 
 header h1 a {
+    font-family: "Libre Baskerville", Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
     color: rgb(240, 93, 80);
 }
@@ -147,19 +212,149 @@ em {
 /*Vídeo del index*/
 .video {
     margin: 2rem auto;
+    height: fit-content;
     text-align: center;
     max-width: 65%;
-    height: fit-content;
 }
 
 .video iframe {
-    width: 100%;
+    width: 33rem;
+    height: 20rem;
     border: none;
-
 }
-.video figcaption{
+
+.video figcaption {
     margin-top: 0.5rem;
     font-size: 0.9em;
     font-style: italic;
     text-align: center;
 }
+
+/*Listado Nobel literatura*/
+/*El p de ordenados tiene una letra más pequeña*/
+.ordenacion {
+    font-size: 60%;
+}
+/* y el subtítulo más grande*/
+.subtitulo {
+    font-size: 200%;
+}
+
+.lista-idioma {
+    max-width: 900px;
+    margin-left: 7rem;
+    margin-right: 0;
+    padding: 1rem 1rem;
+}
+
+.lista-idioma > ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.lista-idioma > ul > li {
+    position: relative;
+    margin: 1.25rem 0;
+    padding-left: 2.5rem;
+    font-weight: 700;
+    color: rgb(0, 0, 25, 0.6);
+}
+
+/* Icono de idioma */
+.lista-idioma .icono-idioma {
+    position: absolute;
+    left: 1rem;
+    width: 1.2em;
+    height: auto;
+}
+
+.lista-idioma > ul > li > ul {
+    margin: .5rem 0 0 0;
+    padding-left: 1.25rem;
+}
+
+.lista-idioma > ul > li > ul > li {
+    list-style: square;
+    margin: .35rem 0;
+    color: rgb(0, 0, 25);
+}
+
+.lista-idioma time {
+    font-weight: 700;
+    color: rgb(0, 0, 25, 0.6);
+}
+
+.lista-idioma a {
+    color: rgb(240, 93, 80);
+    text-decoration: none;
+}
+
+.lista-idioma a:hover {
+    color: rgba(240, 93, 80, .6);
+}
+
+/*La referencia*/
+.referencia {
+    font-size: 60%;
+    margin-left: 15rem;
+}
+.referencia a {
+    color: rgb(240, 93, 80);
+    text-decoration: none;
+}
+
+.referencia a:hover {
+    color: rgba(240, 93, 80, .6);
+}
+
+/*Motivación y premios*/
+.map {
+    max-width: 900px;
+    margin-left: 1rem;
+    margin-right: 0;
+    padding: 0 1rem;
+}
+
+.map dl {
+    margin: 1.5rem 0;
+}
+
+.map dt {
+    margin-top: 1rem;
+}
+
+.map dt a {
+    font-weight: 700;
+    color: rgb(240, 93, 80);
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+
+.map dt a:hover {
+    color: rgba(240, 93, 80, 0.6);
+}
+
+.map dd {
+    margin: 0.25rem 0 1.25rem 0;
+    margin-left: 1.5rem;
+    color: rgba(0, 0, 25, 0.65);
+}
+
+.map dd .texto {
+    font-weight: 700;
+    color: rgba(0, 0, 25, 0.75);
+    margin-left: 0;
+}
+.map dd .texto time {
+    color: rgba(0, 0, 25, 0.65);
+}
+
+/*Para las citas*/
+.motivacion {
+    font-style: italic;
+    font-weight: 400;
+    quotes: "\00AB" "\00BB";
+}
+
+
